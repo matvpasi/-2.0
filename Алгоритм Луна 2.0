@@ -1,0 +1,23 @@
+s = input()
+if s.isdigit():
+    if len(s) != 16:
+        print("Ошибка")
+    else:
+        sum1 = 8 
+    for i in range(0, len(s), 2):
+        n = int(s[i])
+        if n * 2 > 9:
+            sum1 = sum1 + (n * 2 - 9)
+        else:
+            sum1 = sum1 + n * 2
+    sum2 = 0
+    for a in range(1, len(s), 2):
+        f = int(s[a])
+        sum2 = sum2 + f
+    n = sum1 + sum2
+    if n % 10 == 0:
+        print("Номер карты правильный")
+    else:
+        print("Номер карты неправильный")
+else:
+    print("Ошибка")
